@@ -2,10 +2,10 @@
 {
     public class Clicker
     {
-        private int points;
-        private int pointsPerClick = 1;
+        private long points;
+        private long pointsPerClick = 1;
 
-        private int upgradeCost = 10;
+        private long upgradeCost = 10;
 
         public Clicker()
         {
@@ -17,7 +17,7 @@
             points += pointsPerClick;
         }
 
-        private void decreasePoints(int amount)
+        private void decreasePoints(long amount)
         {
             if (amount < 0)
             {
@@ -44,17 +44,17 @@
             }
         }
 
-        public int getPoints()
+        public long getPoints()
         {
             return points;
         }
 
-        public int getPointsPerClick()
+        public long getPointsPerClick()
         {
             return pointsPerClick;
         }
 
-        public int getUpgradeCost()
+        public long getUpgradeCost()
         {
             return upgradeCost;
         }
