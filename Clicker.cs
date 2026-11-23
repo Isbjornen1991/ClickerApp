@@ -5,6 +5,8 @@
         private int points;
         private int pointsPerClick = 1;
 
+        private int upgradeCost = 10;
+
         public Clicker()
         {
             points = 0;
@@ -22,9 +24,10 @@
 
         public bool upgrade()
         {
-            if (points >= 10)
+            if (points >= upgradeCost)
             {
-                decreasePoints(10);
+                decreasePoints(upgradeCost);
+                upgradeCost = upgradeCost + upgradeCost;
                 pointsPerClick++;
                 return true;
             }
@@ -47,6 +50,11 @@
         public int getPointsPerClick()
         {
             return pointsPerClick;
+        }
+
+        public int getUpgradeCost()
+        {
+            return upgradeCost;
         }
 
     }
