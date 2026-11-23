@@ -7,7 +7,7 @@
             for (int i = 0; i < clickers.Count; i++)
             {
                 int clickerNumber = i + 1;
-                int pts = clickers[i].getPoints();
+                long pts = clickers[i].getPoints();
                 string marker = (selectedIndex == i) ? "*" : "";
 
                 Console.Write($"[{marker}{clickerNumber}: {pts} pts]  ");
