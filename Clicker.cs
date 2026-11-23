@@ -17,9 +17,16 @@
             points += pointsPerClick;
         }
 
-        public void decreasePoints(int amount)
+        private void decreasePoints(int amount)
         {
-            points -= amount;
+            if (amount < 0)
+            {
+                return;
+            }
+            if (points - amount >= 0)
+            {
+                points -= amount;
+            }
         }
 
         public bool upgrade()
@@ -35,11 +42,6 @@
             {
                 return false;
             }
-        }
-
-        public void showPoints()
-        {
-            Console.WriteLine(points);
         }
 
         public int getPoints()
