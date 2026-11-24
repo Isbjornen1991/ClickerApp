@@ -29,7 +29,7 @@
                 return false;
             }
 
-            points -= (int)amount;
+            points -= amount;
             return true;
         }
 
