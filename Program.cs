@@ -65,7 +65,7 @@
                     int clickerNumber = selectedIndex.Value + 1;
 
                     Console.WriteLine($"Active: Clicker #{clickerNumber} (Power: +{activeClicker.getPointsPerClick()} / click)");
-                    Console.WriteLine($"Type [I] to increase points, [U] to upgrade {activeClicker.getUpgradeCost()}, or [Q] to go back, then press Enter:");
+                    Console.WriteLine($"Type [I] to increase points, [U] to upgrade  for {activeClicker.getUpgradeCost()} pts, or [Q] to go back, then press Enter:");
 
                     string? actionInput = Console.ReadLine()?.Trim().ToLower();
 

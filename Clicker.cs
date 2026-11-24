@@ -17,23 +17,26 @@
             points += pointsPerClick;
         }
 
-        private void decreasePoints(long amount)
+        private bool decreasePoints(long amount)
         {
             if (amount < 0)
             {
-                return;
+                return false;
             }
-            if (points - amount >= 0)
+
+            if (amount > points)
             {
-                points -= amount;
+                return false;
             }
+
+            points -= (int)amount;
+            return true;
         }
 
         public bool upgrade()
         {
-            if (points >= upgradeCost)
+            if (points >= upgradeCost && decreasePoints(upgradeCost))
             {
-                decreasePoints(upgradeCost);
                 upgradeCost = upgradeCost + upgradeCost;
                 pointsPerClick++;
                 return true;
